@@ -1,5 +1,5 @@
 // src/translate-to-chinese.tsx (示例概念代码)
-import { Clipboard, showToast, Toast, getPreferenceValues, getSelectedText } from "@raycast/api";
+import { showHUD, showToast, Toast, getPreferenceValues, getSelectedText } from "@raycast/api";
 
 // interface Preferences {
 //   apiKey: string;
@@ -31,7 +31,7 @@ export default async function Command() {
     }
 
     console.log(`Selected text: ${selectedText}`);
-    await showToast({ style: Toast.Style.Success, title: "Translated and Pasted", message: `Original: ${selectedText.substring(0, 20)}...` });
+    await showToast({ style: Toast.Style.Success, title: selectedText });
     // const selectedText = await Clipboard.readText();
     // console.log(`Selected text: ${selectedText}`);
     
